@@ -17,7 +17,7 @@ interface MovieState {
 
 }
 
-export const fetchMovies = createAsyncThunk<Movie[], String >("movies/fetchMovies", async(query = "") => {
+export const fetchMovies = createAsyncThunk<Movie[], string >("movies/fetchMovies", async(query = "") => {
 
     const response = await axios.get(
         query

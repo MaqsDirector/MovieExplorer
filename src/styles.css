@@ -1,7 +1,11 @@
 /* src/styles.css */
+html, body {
+  height: 100%;
+}
+
 body {
     font-family: "Arial", sans-serif;
-    background: #1e1e1e;
+    background-color: #1e1e1e;
     color: white;
     margin: 0;
     padding: 20px;
