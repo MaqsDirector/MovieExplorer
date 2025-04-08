@@ -6,8 +6,26 @@ import App from "./App";
 import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    
   <Provider store={store}>
          <App />
      </Provider>
-);
+    
+  </React.StrictMode>
+)
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load', ()=>{
+    navigator.serviceWorker.register('/sw.js')
+    .then(reg=> 
+      console.log("Service worker Registered:", reg))
+      .catch(err => 
+        console.error("ServiceWorker Registration failed:", err))
+      }
+      )
+      
+    }
+
+
  

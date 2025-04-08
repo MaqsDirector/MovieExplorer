@@ -24,7 +24,7 @@ const App: React.FC = () => {
   const [sortOption, setSortOption] = useState<string>("");
 
   useEffect(() => {
-    dispatch(fetchMovies());
+    dispatch(fetchMovies(""));
   }, [dispatch]);
 
   const filteredMovies = movies
@@ -53,7 +53,7 @@ const App: React.FC = () => {
       <ThemeToggle />
 
       <div className="filters">
-        <SearchBar2 />
+        <SearchBar2  />
         <SortDropdown2 sortOption={sortOption} setSortOption={setSortOption} />
         <RatingFilter2 rating={ratingFilter} setRatingFilter={setRatingFilter} />
         <GenreFilter2 selectedGenres={genreFilter} setGenreFilter={setGenreFilter} />
